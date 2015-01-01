@@ -67,7 +67,9 @@ public extension RSTWebViewController {
             self.navigationItem.rightBarButtonItems = self.showsDoneButton ? [self.doneButton!] : nil
             
             let flexibleSpaceItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-            self.toolbarItems = [self.backButton, flexibleSpaceItem, self.forwardButton, flexibleSpaceItem, self.refreshButton, flexibleSpaceItem, self.shareButton]
+            let fixedSpaceItem = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
+            fixedSpaceItem.width = 1.0
+            self.toolbarItems = [self.backButton, flexibleSpaceItem, fixedSpaceItem, self.forwardButton, flexibleSpaceItem, self.refreshButton, flexibleSpaceItem, self.shareButton]
         }
     }
     
